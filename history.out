@@ -1,0 +1,203 @@
+    1  groupadd students
+    2  sudo 
+    3  groupadd students
+    4  sudo groupadd students
+    5  sudo useradd -u 1234 -g students -m user1
+    6  [200~sudo passwd user1
+    7  ~sudo passwd user1
+    8  sudo passwd user1
+    9  id user1
+   10  id user1 > stat.out
+   11  id user1
+   12  id user1 > stat.out
+   13  sudo groupadd students
+   14  id user1
+   15  id user1 > stat.out
+   16  chage -M 90 user1
+   17  sudo chage -M 90 user1
+   18  chage -l user1 >> stat.out
+   19  sudo chage -l user1 >> stat.out
+   20  cat stat.out
+   21  history > History.out
+   22  ls -la
+   23  mkdir lab_report
+   24  mv stat.out History.out lab_report/
+   25  cd lab_report
+   26  ls -la
+   27  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   28  cat lab_report/find_suid.out
+   29  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   30  cat lab_report/find_suid.out
+   31  sudo find / -type f -perm /4000 2>/dev/null > find_suid.out
+   32  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   33  cat lab_report/find_suid.out
+   34  cat find_suid.out
+   35  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   36  history > history.out
+   37  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0'
+   38  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > lab_report/ps_monitor.out
+   39  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   40  cat ps_monitor.out
+   41  history > history.out
+   42  cat history.out 
+   43  cp /etc/passwd /etc/shadow /etc/group ~/lab_report/
+   44  cat /etc/shadow
+   45  cp /usr/bin/cat ~/lab_report/cat_suid
+   46  ls -la
+   47  sudo chown root:root ~/lab_report/cat_suid
+   48  sudo chmod u+s ~/lab_report/cat_suid
+   49  ls -l ~/lab_report/cat_suid
+   50  ~/lab_report/cat_suid /etc/shadow
+   51  ~/lab_report/cat_suid /etc/shadow > ~/lab_report/stat.out
+   52  history > ~/lab_report/history.out
+    1  groupadd students
+    2  sudo 
+    3  groupadd students
+    4  sudo groupadd students
+    5  sudo useradd -u 1234 -g students -m user1
+    6  [200~sudo passwd user1
+    7  ~sudo passwd user1
+    8  sudo passwd user1
+    9  id user1
+   10  id user1 > stat.out
+   11  id user1
+   12  id user1 > stat.out
+   13  sudo groupadd students
+   14  id user1
+   15  id user1 > stat.out
+   16  chage -M 90 user1
+   17  sudo chage -M 90 user1
+   18  chage -l user1 >> stat.out
+   19  sudo chage -l user1 >> stat.out
+   20  cat stat.out
+   21  history > History.out
+   22  ls -la
+   23  mkdir lab_report
+   24  mv stat.out History.out lab_report/
+   25  cd lab_report
+   26  ls -la
+   27  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   28  cat lab_report/find_suid.out
+   29  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   30  cat lab_report/find_suid.out
+   31  sudo find / -type f -perm /4000 2>/dev/null > find_suid.out
+   32  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   33  cat lab_report/find_suid.out
+   34  cat find_suid.out
+   35  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   36  history > history.out
+   37  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0'
+   38  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > lab_report/ps_monitor.out
+   39  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   40  cat ps_monitor.out
+   41  history > history.out
+   42  cat history.out 
+   43  cp /etc/passwd /etc/shadow /etc/group ~/lab_report/
+   44  cat /etc/shadow
+   45  cp /usr/bin/cat ~/lab_report/cat_suid
+   46  ls -la
+   47  sudo chown root:root ~/lab_report/cat_suid
+   48  sudo chmod u+s ~/lab_report/cat_suid
+   49  ls -l ~/lab_report/cat_suid
+   50  ~/lab_report/cat_suid /etc/shadow
+   51  ~/lab_report/cat_suid /etc/shadow > ~/lab_report/stat.out
+   52  history > ~/lab_report/history.out
+   53  touch ~/lab_report/test.txt
+   54  ls -l ~/lab_report/test.txt
+   55  chown root test.txt
+   56  ls -l ~/lab_report/test.txt
+   57  cp /usr/bin/chown ~/lab_report/chown_suid
+   58  sudo chown root:root ~/lab_report/chown_suid
+   59  sudo chmod u+s ~/lab_report/chown_suid
+   60  ls -l ~/lab_report/chown_suid
+   61  ~/lab_report/chown_suid root:root ~/lab_report/test.txt
+   62  ls -l ~/lab_report/test.txt
+   63  sudo chown root:root chown_suid
+   64  sudo chmod u+s chown_suid
+   65  ls -ld . chown_suid >> stat.out
+   66  getcap ./chown_suid >> getcap.out
+   67  ls -l test.txt
+   68  history >> history.out
+    1  groupadd students
+    2  sudo 
+    3  groupadd students
+    4  sudo groupadd students
+    5  sudo useradd -u 1234 -g students -m user1
+    6  [200~sudo passwd user1
+    7  ~sudo passwd user1
+    8  sudo passwd user1
+    9  id user1
+   10  id user1 > stat.out
+   11  id user1
+   12  id user1 > stat.out
+   13  sudo groupadd students
+   14  id user1
+   15  id user1 > stat.out
+   16  chage -M 90 user1
+   17  sudo chage -M 90 user1
+   18  chage -l user1 >> stat.out
+   19  sudo chage -l user1 >> stat.out
+   20  cat stat.out
+   21  history > History.out
+   22  ls -la
+   23  mkdir lab_report
+   24  mv stat.out History.out lab_report/
+   25  cd lab_report
+   26  ls -la
+   27  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   28  cat lab_report/find_suid.out
+   29  sudo find / -type f -perm /4000 2>/dev/null > lab_report/find_suid.out
+   30  cat lab_report/find_suid.out
+   31  sudo find / -type f -perm /4000 2>/dev/null > find_suid.out
+   32  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   33  cat lab_report/find_suid.out
+   34  cat find_suid.out
+   35  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   36  history > history.out
+   37  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0'
+   38  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > lab_report/ps_monitor.out
+   39  ps -eo pid,ruid,euid,comm | awk '$2 != 0 && $3 == 0' > ps_monitor.out
+   40  cat ps_monitor.out
+   41  history > history.out
+   42  cat history.out 
+   43  cp /etc/passwd /etc/shadow /etc/group ~/lab_report/
+   44  cat /etc/shadow
+   45  cp /usr/bin/cat ~/lab_report/cat_suid
+   46  ls -la
+   47  sudo chown root:root ~/lab_report/cat_suid
+   48  sudo chmod u+s ~/lab_report/cat_suid
+   49  ls -l ~/lab_report/cat_suid
+   50  ~/lab_report/cat_suid /etc/shadow
+   51  ~/lab_report/cat_suid /etc/shadow > ~/lab_report/stat.out
+   52  history > ~/lab_report/history.out
+   53  touch ~/lab_report/test.txt
+   54  ls -l ~/lab_report/test.txt
+   55  chown root test.txt
+   56  ls -l ~/lab_report/test.txt
+   57  cp /usr/bin/chown ~/lab_report/chown_suid
+   58  sudo chown root:root ~/lab_report/chown_suid
+   59  sudo chmod u+s ~/lab_report/chown_suid
+   60  ls -l ~/lab_report/chown_suid
+   61  ~/lab_report/chown_suid root:root ~/lab_report/test.txt
+   62  ls -l ~/lab_report/test.txt
+   63  sudo chown root:root chown_suid
+   64  sudo chmod u+s chown_suid
+   65  ls -ld . chown_suid >> stat.out
+   66  getcap ./chown_suid >> getcap.out
+   67  ls -l test.txt
+   68  history >> history.out
+   69  sudo visudo
+   70  sudo -u user1 sudo date --set "2024-01-01 12:00:00"
+   71  sudo -u user1 sudo timedatectl set-time "12:00:00"
+   72  sudo timedatectl set-ntp 0
+   73  sudo -u user1 sudo date --set "2024-01-01 12:00:00"
+   74  sudo -u user1 sudo timedatectl set-time "12:00:00"
+   75  sudo -u user1 sudo date --set "2024-01-01 12:00:00"
+   76  sudo -u user1 sudo timedatectl set-time "12:00:00"
+   77  1234
+   78  sudo -u user1 sudo timedatectl set-time "12:00:00"
+   79  sudo -u user1 sudo date --set "2024-01-01 12:00:00"
+   80  sudo -l -U user1 >> ~/lab_report/sudo_localhost.out
+   81  sudo -u user1 sudo date --set "2024-01-01 12:00:00"
+   82  date >> ~/lab_report/stat.out
+   83  history >> ~/lab_report/history.out
